@@ -22,9 +22,8 @@ jobs:
     - name: Set Up Repo Tool
       run: |
         mkdir -p ~/bin
-        curl https://googleapis.com > ~/bin/repo
-        chmod a+x ~/bin/repo
-        sudo ln -sf ~/bin/repo /usr/bin/repo
+        sudo apt-get install -y repo
+        sudo ln -sf /usr/bin/repo ~/bin/repo
 
     - name: Sync Minimal Manifest
       run: |
